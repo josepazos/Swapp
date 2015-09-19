@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.josecarlos.swapp.LoginActivity"
+    android:background="#0099cc"
+    android:id="@+id/frameLayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tutiLayout"
+        android:layout_gravity="center"
+        android:background="#11568f">
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="47dp"
+            android:layout_above="@+id/emailSignUp"
+            android:layout_alignLeft="@+id/emailSignUp"
+            android:layout_alignStart="@+id/emailSignUp"
+            />
+
+        <EditText
+            android:background="@drawable/rectangle_background"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordBox"
+            android:hint="@string/password_hint"
+            android:textColorHint="#FFFFFF"
+            android:layout_above="@+id/login_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp" />
+
+        <EditText
+            android:background="@drawable/rectangle_background"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailBox"
+            android:hint="@string/email_hint"
+            android:textColorHint="#FFFFFF"
+            android:layout_above="@+id/passwordBox"
+            android:layout_alignLeft="@+id/passwordBox"
+            android:layout_alignStart="@+id/passwordBox"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/forgot_pass"
+            android:id="@+id/forgotPass"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/emailBox"
+            android:layout_alignLeft="@+id/passwordBox"
+            android:layout_alignStart="@+id/passwordBox"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignEnd="@+id/imageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/email_sign_up"
+            android:id="@+id/emailSignUp"
+            android:layout_marginBottom="77dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/swapp_icon"
+            android:contentDescription="@string/swap_icon"
+            android:layout_above="@+id/emailBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="34dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
